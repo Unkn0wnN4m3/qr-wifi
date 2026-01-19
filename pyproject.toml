@@ -1,0 +1,25 @@
+[project]
+name = "qr-wifi"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+authors = [
+    { name = "Unkn0wnN4m3", email = "87839850+Unkn0wnN4m3@users.noreply.github.com" }
+]
+requires-python = ">=3.12"
+dependencies = [
+    "qrcode>=8.2",
+]
+
+[project.scripts]
+qr-wifi = "qr_wifi:main"
+
+[build-system]
+requires = ["uv_build>=0.9.25,<0.10.0"]
+build-backend = "uv_build"
+
+[dependency-groups]
+dev = [
+    "basedpyright>=1.37.1",
+    "ruff>=0.14.13",
+]
