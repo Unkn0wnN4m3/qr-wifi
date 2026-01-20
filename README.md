@@ -1,5 +1,9 @@
 # qr-wifi
 
+[![Latest Release](https://img.shields.io/github/v/release/Unkn0wnN4m3/qr-wifi)](https://github.com/Unkn0wnN4m3/qr-wifi/releases/latest)
+[![Python Version](https://img.shields.io/badge/python-3.12%2B-blue)](https://www.python.org/downloads/)
+[![License](https://img.shields.io/badge/license-Open%20Source-green)](https://github.com/Unkn0wnN4m3/qr-wifi)
+
 Generate QR codes for WiFi credentials with validation and configurable options.
 
 > **Note:** This project was refactored using vibe coding.
