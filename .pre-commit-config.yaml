@@ -1,0 +1,35 @@
+repos:
+  # Pre-commit hooks básicos
+  - repo: https://github.com/pre-commit/pre-commit-hooks
+    rev: v5.0.0
+    hooks:
+      - id: trailing-whitespace
+      - id: end-of-file-fixer
+      - id: check-yaml
+      - id: check-toml
+      - id: check-merge-conflict
+      - id: mixed-line-ending
+        args: [--fix=lf]
+
+  # Ruff - Linting y formateo de Python
+  - repo: https://github.com/astral-sh/ruff-pre-commit
+    rev: v0.14.13
+    hooks:
+      - id: ruff
+        # Sin --fix: solo reporta errores
+      - id: ruff-format
+        # Sin --fix: solo reporta errores de formato
+
+  # Basedpyright - Type checking
+  - repo: https://github.com/RobertCraigie/pyright-python
+    rev: v1.1.395
+    hooks:
+      - id: pyright
+
+  # Markdownlint - Linting de Markdown
+  - repo: https://github.com/igorshubovych/markdownlint-cli
+    rev: v0.43.0
+    hooks:
+      - id: markdownlint
+        # Sin --fix: solo reporta errores
+        # Sin .markdownlint.json: usa configuración por defecto
