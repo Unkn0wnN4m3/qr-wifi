@@ -1,6 +1,6 @@
 [project]
 name = "qr-wifi"
-version = "0.1.0"
+version = "1.0.0"
 description = "Generate QR codes for WiFi credentials with validation and configurable options"
 readme = "README.md"
 authors = [
