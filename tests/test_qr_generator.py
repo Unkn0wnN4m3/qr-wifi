@@ -1,11 +1,12 @@
 """Tests for QR code generator."""
 
 from pathlib import Path
+from typing import cast
 
 import pytest
 
 from qr_wifi.exceptions import QRGenerationError
-from qr_wifi.qr_generator import QRGenerator
+from qr_wifi.qr_generator import ErrorCorrection, QRGenerator
 
 
 class TestQRGeneratorInit:
@@ -23,7 +24,9 @@ class TestQRGeneratorInit:
     def test_custom_error_correction(self, tmp_path: Path) -> None:
         """Test custom error correction levels."""
         for level in ["L", "M", "Q", "H"]:
-            generator = QRGenerator(error_correction=level, output_dir=tmp_path)
+            generator = QRGenerator(
+                error_correction=cast(ErrorCorrection, level), output_dir=tmp_path
+            )
             assert generator.error_correction == level
 
     def test_invalid_error_correction(self, tmp_path: Path) -> None:
@@ -119,7 +122,9 @@ class TestQRGeneratorGenerate:
     def test_generate_custom_error_correction(self, tmp_path: Path) -> None:
         """Test generating with different error correction levels."""
         for level in ["L", "M", "Q", "H"]:
-            generator = QRGenerator(error_correction=level, output_dir=tmp_path)
+            generator = QRGenerator(
+                error_correction=cast(ErrorCorrection, level), output_dir=tmp_path
+            )
             data = "WIFI:S:TestNet;T:WPA2;P:password123;;"
 
             output_path = generator.generate(data, f"qr_{level}")
