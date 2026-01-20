@@ -7,7 +7,7 @@ Generate QR codes for WiFi credentials with validation and configurable options.
 ## Features
 
 - 🔐 **Secure WiFi QR codes** - WPA, WPA2, WEP, and open networks
-- ✅ **Input validation** - Validates SSID length, password requirements, and security types
+- ✅ **Input validation** - Validates SSID, password, and security types
 - 🎨 **Multiple formats** - Generate PNG or SVG QR codes
 - ⚙️ **Configurable** - Customize error correction, box size, and border
 - 🔒 **Special character handling** - Automatically escapes special characters
@@ -101,14 +101,17 @@ qr-wifi --ssid "MyNet" --security WPA2 --password "secure" \
 ## Password Requirements
 
 ### WPA/WPA2
+
 - 8-63 characters
 - Can contain any characters
 
 ### WEP
+
 - Must be hexadecimal (0-9, A-F)
 - Must be 10, 26, or 58 characters long
 
 ### Open Networks (nopass)
+
 - No password required
 
 ## Development
@@ -157,7 +160,7 @@ uv run ruff format
 
 ## Project Structure
 
-```
+```text
 qr-wifi/
 ├── src/
 │   └── qr_wifi/
