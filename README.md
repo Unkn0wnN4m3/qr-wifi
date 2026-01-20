@@ -2,7 +2,7 @@
 
 Generate QR codes for WiFi credentials with validation and configurable options.
 
-> **Nota:** Este proyecto fue refactorizado usando inteligencia artificial.
+> **Note:** This project was refactored using vibe coding.
 
 ## Features
 
